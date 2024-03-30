@@ -1,0 +1,45 @@
+{
+  "name": "full_project",
+  "version": "1.0.0",
+  "description": "This project will be used to validate our academic subject called web development",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "backend": "nodemon server.js",
+    "frontend": "ng serve --open"
+  },
+  "keywords": [
+    "js",
+    "node",
+    "express",
+    "mongo",
+    "mongoose",
+    "angular",
+    ".env",
+    "ts",
+    "typescript"
+  ],
+  "author": "Firas/Yassine",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "bcrypt": "^5.1.1",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "joi": "^17.11.0",
+    "joi-password-complexity": "^5.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.0",
+    "nodemailer": "^6.9.6",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0",
+    "qs": "^6.11.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
+  }
+}

@@ -1,0 +1,83 @@
+@startuml
+
+
+abstract class User {
+-fullName: String
+-username: String
+-password: String
+-email: String
+-cin: String
+-image: String
+-birthdate: Date
++register()
++login()
+}
+
+class Backer extends User{
+-wallet: double
+-amountPledged: double
++fundCampaign()
++viewCampaigns()
+}
+
+class CampaignOwner extends User{
+
++createCampaign()
++manageCampaign()
++fulfillRewards()
+}
+
+class Administrator extends User{
++manageUsers()
++analytics()
+}
+
+class Campaign{
+-title: String
+-description: String
+-image : String
+-bank_rib : LongText
+-goalAmount: double
+-goalRemaining : double
+-startDate: Date
+-endDate: Date
+}
+
+class Categories {
+-name: String
+-description: String
++manageCategories()
+}
+
+class RewardCampaign {
+-name: String
+-date: Date
+-image: String
+-quantity: int
+-quantityRemaining: int
+-status: Boolean
+
+}
+
+class Reward {
+-title: String
+-description: String
+}
+
+class BackerCampaign{
+-amount: double
+-paymentMethod: String
+-paymentStatus: String
+}
+
+
+CampaignOwner "1" -- "0..*" Campaign : owns
+Categories "1" -- "0..*" Campaign : contain
+
+Reward "1" .. "1..*" RewardCampaign : contain
+RewardCampaign "1..*" .. "1" Campaign : contain
+Backer "1" .. "1..*" BackerCampaign : fund
+BackerCampaign "1..*" .. "1" Campaign : funded
+
+
+@enduml

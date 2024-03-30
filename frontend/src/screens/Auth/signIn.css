@@ -1,0 +1,12 @@
+body {
+  background-color: hsl(0, 0%, 96%);
+}
+.input-validation {
+  color: rgb(227, 63, 63);
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content:flex-start;
+  align-items: flex-start;
+}
